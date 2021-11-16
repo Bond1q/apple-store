@@ -1,0 +1,118 @@
+@import "constants.scss";
+
+.chooseType{
+	width: 300px;
+	background: $main-color;
+	margin:  10px;
+	padding: 45px 25px;
+
+	.chooseTypePriceBlock{
+		.CTPrice{
+			padding-bottom: 20px;
+			font-size: 18px;
+
+		}
+
+		.dash{
+			margin: 0 10px;
+		}
+		input{
+			text-align: left;
+			font-size: 16px;
+			max-width: 65px;
+			background: none;
+			outline: none;
+			color: #fff;
+			padding: 2px 7px;
+			border-radius: 2px;
+			border: 1px solid #6e6d6d;
+			transition: 0.3s;
+
+
+			&:focus{
+				transition: 0.3s;
+			border: 1px solid #fff;
+
+			}
+		}
+		.currency{
+			margin-left: 5px;
+		}
+	}
+	.chooseTypeBlock{
+		margin-top: 40px;
+		position: relative;
+
+		.CTBlockName{
+			padding-bottom: 20px;
+			font-size: 18px;
+		}
+
+		&::before{
+			position: absolute;
+			top: -35px;
+			left: -10px;
+			content: url("../imgs/line.png");
+		}
+
+		.CTBlockItem{
+			input{
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				height: 0;
+				width: 0;
+			}
+			.setType{
+				display: block;
+				position: relative;
+				padding-left: 22px;
+				margin-bottom: 7px;
+				transition: 0.5s	;
+				// color:  #8A8A8A;
+				cursor: pointer;
+				color: #fff;
+
+				// line-height: 40px;
+				// max-height: 30px;			\
+				&:hover{
+				transition: 0.5s	;
+
+					color: #fff;
+				}	
+				
+
+			}
+			.checkmark {
+				// box-sizing: border-box;
+				transition: 0.5s	;
+
+				position: absolute;
+				top: 3.5px;
+				left: 0;
+				height: 14px;
+				width: 14px;
+				background-color: none;
+				border: 1px solid #8A8A8A;
+				border-radius: 2px;
+			 }
+			 .setType input:checked ~ .checkmark {
+				transition: 0.5s	;
+
+				background-color:#ffffff;
+				border: 1px solid #ffffff;
+				background-image: url("../imgs/check.png");
+				background-size: 15px;
+				image-rendering: -webkit-optimize-contrast;
+				background-position: center;
+
+			 }
+			 .setType:hover input ~ .checkmark {
+				border: 1px solid #ffffff;
+			 }
+
+
+		}
+
+	}
+}
