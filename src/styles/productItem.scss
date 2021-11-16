@@ -1,0 +1,52 @@
+@import "mixins.scss";
+@import "constants.scss";
+
+.productItem{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 300px;
+	height: 425px;
+	background: $main-color;
+	padding: 30px 44px;
+	margin: 10px ;
+
+	.productColumn{
+		@include column(365px,space-between, center);
+		text-align: center;
+		.productPhoto{
+			img{
+				width: 177px;
+				height: 233px;
+			}
+		}
+		.productName{
+			font-size: 18px;
+		}
+		.productPrice{
+			font-size: 24px;
+		}
+	}
+	transition: 1s;
+
+	border: 1px solid  $main-color;
+
+	&:hover{
+		// width: 299px;
+		// height: 420px;
+		transition: 1s;
+		border: 1px solid white;
+	}
+}
+
+.pageRow{
+	@include row(960px, space-between,center);
+	margin-left:auto;
+
+}
+.rowww{
+	@include row(1290px, space-between,flex-start);
+
+	// width: 1290px;
+	// display: flex;
+	// margin: 0 auto;
+}
