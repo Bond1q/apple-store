@@ -1,10 +1,11 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
-import iphones from "./reducers/iphones";
+import thunkMiddleware from 'redux-thunk';
+import iphonesReducer from "./reducers/iphones-reducer";
 
 const reducers = combineReducers({
-	iphonePage: iphones,
+	iphonesStore: iphonesReducer,
 })
 
-const store = createStore(reducers)
+const store = createStore(reducers, applyMiddleware(thunkMiddleware))
 
 export default store

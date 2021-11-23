@@ -2,9 +2,9 @@ import React from 'react'
 import ChooseTypeBlock from './ChooseTypeBlock';
 import "../styles/chooseType.scss"
 
-const ChooseType = () => {
-	const [minPrice, setMinPrice] = React.useState(0);
-	const [maxPrice, setMaxPrice] = React.useState(10000);
+const ChooseTypeContainer = (props) => {
+	const [minPrice, setMinPrice] = React.useState(props.minPrice);
+	const [maxPrice, setMaxPrice] = React.useState(props.maxPrice);
 	const changeMinPice = (e) => {
 		if (!isNaN(+e.target.value.replace(/ /g, ''))) {
 			setMinPrice(e.target.value.replace(/ /g, ''))
@@ -18,6 +18,16 @@ const ChooseType = () => {
 	function numberWithSpaces(x) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 	}
+	React.useEffect(() => {
+
+		setMinPrice((props.minPrice))
+		setMaxPrice((props.maxPrice))
+
+	}, [props.minPrice, props.maxPrice])
+
+	const typeBlocks = props.types.map((elem, index) => {
+		return <ChooseTypeBlock name={elem.name} items={elem.items} key={index} />
+	})
 	return (
 		<div className="chooseType">
 			<div className="chooseTypePriceBlock">
@@ -28,11 +38,10 @@ const ChooseType = () => {
 				<span className="currency">$</span>
 
 			</div>
-			<ChooseTypeBlock />
-			<ChooseTypeBlock />
+			{typeBlocks}
 
 		</div>
 	)
 }
 
-export default ChooseType
+export default ChooseTypeContainer

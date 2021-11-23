@@ -38,15 +38,3 @@
 	}
 }
 
-.pageRow{
-	@include row(960px, space-between,center);
-	margin-left:auto;
-
-}
-.rowww{
-	@include row(1290px, space-between,flex-start);
-
-	// width: 1290px;
-	// display: flex;
-	// margin: 0 auto;
-}
