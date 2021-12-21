@@ -1,10 +1,15 @@
 import React from 'react'
 import ChooseTypeBlock from './ChooseTypeBlock';
-import "../styles/chooseType.scss"
+import "../../styles/chooseType.scss"
+import { useDispatch } from 'react-redux';
+import { changePrice } from '../../redux/reducers/iphones-reducer';
 
 const ChooseTypeContainer = (props) => {
+	// console.log("RERENDER");
+	const dispatch = useDispatch()
 	const [minPrice, setMinPrice] = React.useState(props.minPrice);
 	const [maxPrice, setMaxPrice] = React.useState(props.maxPrice);
+	const [shoudFilterByPrice, setShoudFilterByPrice] = React.useState(false)
 	const changeMinPice = (e) => {
 		if (!isNaN(+e.target.value.replace(/ /g, ''))) {
 			setMinPrice(e.target.value.replace(/ /g, ''))
@@ -12,18 +17,26 @@ const ChooseTypeContainer = (props) => {
 	}
 	const changeMaxPice = (e) => {
 		if (!isNaN(+e.target.value.replace(/ /g, ''))) {
+
 			setMaxPrice(e.target.value.replace(/ /g, ''))
 		}
 	}
 	function numberWithSpaces(x) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 	}
-	React.useEffect(() => {
 
+	React.useEffect(() => {
 		setMinPrice((props.minPrice))
 		setMaxPrice((props.maxPrice))
 
 	}, [props.minPrice, props.maxPrice])
+
+	React.useEffect(() => {
+		if (shoudFilterByPrice) {
+			dispatch(changePrice(minPrice, maxPrice))
+
+		}
+	}, [shoudFilterByPrice])
 
 	const typeBlocks = props.types.map((elem, index) => {
 		return <ChooseTypeBlock name={elem.name} items={elem.items} key={index} />
@@ -32,9 +45,11 @@ const ChooseTypeContainer = (props) => {
 		<div className="chooseType">
 			<div className="chooseTypePriceBlock">
 				<div className="CTPrice">Price</div>
-				<input onClick={(e) => e.target.select()} className="priceInput1" value={numberWithSpaces(minPrice)} onChange={changeMinPice} />
+				<input onFocus={() => setShoudFilterByPrice(false)} onBlur={() => setShoudFilterByPrice(true)}
+					onClick={(e) => e.target.select()} className="priceInput1" value={numberWithSpaces(minPrice)} onChange={changeMinPice} />
 				<span className="dash">‒</span>
-				<input onClick={(e) => e.target.select()} className="priceInput2" value={numberWithSpaces(maxPrice)} onChange={changeMaxPice} />
+				<input onFocus={() => setShoudFilterByPrice(false)} onBlur={() => setShoudFilterByPrice(true)}
+					onClick={(e) => e.target.select()} className="priceInput2" value={numberWithSpaces(maxPrice)} onChange={changeMaxPice} />
 				<span className="currency">$</span>
 
 			</div>
@@ -42,6 +57,7 @@ const ChooseTypeContainer = (props) => {
 
 		</div>
 	)
+
 }
 
-export default ChooseTypeContainer
+export default React.memo(ChooseTypeContainer)

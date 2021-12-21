@@ -16,19 +16,6 @@
 		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg", "color": "Black", "price":899.99, "size": "256 GB"},
 		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg", "color": "Black", "price":999.99, "size": "512 GB"},
 
-		{"name":"iPhone 13 Pro", "imgUrl":"https://i.ibb.co/Thjpqhc/13-pro-blue.jpg", "color": "Blue", "price":999.99, "size": "128 GB"},
-		{"name":"iPhone 13 Pro", "imgUrl":"https://i.ibb.co/Thjpqhc/13-pro-blue.jpg", "color": "Blue", "price":1099.99, "size": "256 GB"},
-		{"name":"iPhone 13 Pro", "imgUrl":"https://i.ibb.co/Thjpqhc/13-pro-blue.jpg", "color": "Blue", "price":1299.99, "size": "512 GB"},
-
-		{"name":"iPhone 13 Pro", "imgUrl":"https://i.ibb.co/W6nvQtb/13-pro-gold.jpg", "color": "Gold", "price":999.99, "size": "128 GB"},
-		{"name":"iPhone 13 Pro", "imgUrl":"https://i.ibb.co/W6nvQtb/13-pro-gold.jpg", "color": "Gold", "price":1099.99, "size": "256 GB"},
-		{"name":"iPhone 13 Pro", "imgUrl":"https://i.ibb.co/W6nvQtb/13-pro-gold.jpg", "color": "Gold", "price":1299.99, "size": "512 GB"},
-
-		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/vmxG1c7/13-pro-max-gold.jpg", "color": "Gold", "price":1099.99, "size": "128 GB"},
-		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/vmxG1c7/13-pro-max-gold.jpg", "color": "Gold", "price":1199.99, "size": "256 GB"},
-		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/vmxG1c7/13-pro-max-gold.jpg", "color": "Gold", "price":1399.99, "size": "512 GB"},
-
-		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg", "color": "Siver", "price":1099.99, "size": "128 GB"},
 		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg", "color": "Siver", "price":1199.99, "size": "256 GB"},
 		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg", "color": "Siver", "price":1399.99, "size": "512 GB"}
 	]

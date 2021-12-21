@@ -1,11 +1,20 @@
 @import "mixins.scss";
 
 .itemsRow{
-	@include row(960px, space-between,center);
+	@include row(1280px, auto,center);
 	margin-left:auto;
+	@media only screen and (max-width : 1700px) {
+		@include row(960px, auto,center);
+		margin-left:auto;
 
+
+	}
 }
 .allItems{
-	@include row(1290px, space-between,flex-start);
+	@include row(1610px, space-between,flex-start);
+	@media only screen and (max-width : 1700px) {
+		@include row(1290px, space-between,auto);
 
+	}
 }
+
