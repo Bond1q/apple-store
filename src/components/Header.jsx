@@ -1,21 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import appleLogo from "../imgs/appleLogo.png"
 import bag from "../imgs/bag.png"
 import "../styles/header.scss"
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
 
-function Header() {
+const Header = () => {
+	const location = useLocation()
+	// console.log(location);
 	return (
+
 		<div className="header">
 			<div className="bigRowHeader">
-				<Link to="/home">
+				<Link to="/iphones">
 					<div className="appleLogo"><img src={appleLogo} alt="" /></div>
 				</Link>
 
 				<div className="smallRowHeader">
-					<Link to="/iphones">iPhone</Link>
-					<Link to="/ipads">iPad</Link>
-					<Link to="/macs">Mac</Link>
+					<NavLink to="/iphones" className={isActive => isActive ? 'activePage' : ''} >iPhone</NavLink>
+					<NavLink to="/ipads">iPad</NavLink>
+					<NavLink to="/macs">Mac</NavLink>
 				</div>
 				<Link to="/cart">
 					<div className="bagHeader">

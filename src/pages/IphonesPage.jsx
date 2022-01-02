@@ -5,17 +5,15 @@ import ProductItem from '../components/ProductItem'
 import { getIphones } from '../redux/reducers/iphones-reducer'
 import "../styles/pageItems.scss"
 
-const IphonesPage = () => {
+const IphonesPage = React.memo(() => {
 	const [iphones, maxPrice, minPrice, models, sizes, colors] = useSelector(({ iphonesStore }) => {
 		return [iphonesStore.iphones, iphonesStore.maxPrice, iphonesStore.minPrice, iphonesStore.models,
 		iphonesStore.sizes, iphonesStore.colors]
 	})
 
-
 	const dispatch = useDispatch()
 	React.useEffect(() => {
 		dispatch(getIphones())
-
 	}, [])
 
 	const items = iphones.length != 0 ? iphones.map((item, index) => {
@@ -39,6 +37,6 @@ const IphonesPage = () => {
 
 		</div>
 	)
-}
+})
 
 export default IphonesPage

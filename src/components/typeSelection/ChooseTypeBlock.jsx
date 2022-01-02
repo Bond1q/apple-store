@@ -8,7 +8,8 @@ const ChooseTypeBlock = (props) => {
 		<div className="chooseTypeBlock">
 			<div className="CTBlockName">{props.name}</div>
 			{props.items.map((name, index) => {
-				return <CTBlockItem blockName={props.name} name={name} key={index} />
+				return <CTBlockItem minPrice={props.minPrice} maxPrice={props.maxPrice}
+					blockName={props.name} name={name} key={index} />
 			})}
 		</div>
 	)

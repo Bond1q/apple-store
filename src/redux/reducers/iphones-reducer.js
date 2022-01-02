@@ -1,20 +1,12 @@
-import { getIphoneFromDB } from "../../api/api"
-import { filterItems, toggleFilter } from "../filters/iphone-filter"
+import { getItemsFromDB } from "../../api/api"
+import { filterItems, toggleFilter } from "../filters/filter"
 
 const SET_IPHONES = "SET_IPHONES"
 const TOGGLE_FILTER = "TOGGLE_FILTER"
 const CHANGE_PRICE = "CHANGE_PRICE"
 
 const initialState = {
-	iphones: [
-		{ name: "Apple iPhone 12 Pro Max", img: "13_black.jpg", color: "Silver", size: 128, price: 1200 },
-		{ name: "Apple iPhone 12 Pro Max", img: "13_black.jpg", color: "Silver", size: 128, price: 1200 },
-		{ name: "Apple iPhone 12 Pro Max", img: "13_black.jpg", color: "Silver", size: 128, price: 1200 },
-		{ name: "Apple iPhone 12 Pro Max", img: "13_black.jpg", color: "Silver", size: 128, price: 1200 },
-		{ name: "Apple iPhone 12 Pro Max", img: "13_black.jpg", color: "Silver", size: 128, price: 1200 },
-		{ name: "Apple iPhone 12 Pro Max", img: "13_black.jpg", color: "Silver", size: 128, price: 1200 },
-		{ name: "Apple iPhone 12 Pro Max", img: "13_black.jpg", color: "Silver", size: 128, price: 1200 },
-	],
+	iphones: [],
 	maxPrice: 0,
 	minPrice: 0,
 	models: [],
@@ -90,7 +82,7 @@ export const changePrice = (minPrice, maxPrice) => ({ type: CHANGE_PRICE, minPri
 
 export const getIphones = () => {
 	return async (dispatch) => {
-		const result = await getIphoneFromDB()
+		const result = await getItemsFromDB()
 		return dispatch(setIphones(result.data.iphones))
 	}
 }

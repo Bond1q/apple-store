@@ -1,0 +1,32 @@
+@import "mixins.scss";
+.carousel{
+		button{
+			transition: 400ms;
+			&:hover{
+				color: #ffff !important;
+				transition: 400ms;
+			}
+		}
+		
+
+		.image {
+			background-size: 275px  !important;
+			background-repeat: no-repeat !important;
+
+		 }
+
+		 .smallPhotos{
+			 @include row(200px, space-between, center);
+			 margin-top: 15px;
+			 margin-left: 150px;
+			 .smallPhoto{
+				img{
+					width: 40px;
+					cursor: pointer;
+				}
+				
+			 }
+
+		 }
+}
+

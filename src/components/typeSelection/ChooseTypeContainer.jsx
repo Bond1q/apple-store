@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import { changePrice } from '../../redux/reducers/iphones-reducer';
 
 const ChooseTypeContainer = (props) => {
-	// console.log("RERENDER");
 	const dispatch = useDispatch()
 	const [minPrice, setMinPrice] = React.useState(props.minPrice);
 	const [maxPrice, setMaxPrice] = React.useState(props.maxPrice);
@@ -39,7 +38,7 @@ const ChooseTypeContainer = (props) => {
 	}, [shoudFilterByPrice])
 
 	const typeBlocks = props.types.map((elem, index) => {
-		return <ChooseTypeBlock name={elem.name} items={elem.items} key={index} />
+		return <ChooseTypeBlock minPrice={minPrice} maxPrice={maxPrice} name={elem.name} items={elem.items} key={index} />
 	})
 	return (
 		<div className="chooseType">

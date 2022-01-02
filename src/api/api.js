@@ -1,6 +1,9 @@
 import axios from "axios";
 
-export const getIphoneFromDB = async () => {
-	const items = await axios.get("http://localhost:3000/db.json")
+const url = 'http://localhost:3000/db.json'
+
+export const getItemsFromDB = async () => {
+	const items = await axios.get(url)
 	return items
 }
+

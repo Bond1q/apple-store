@@ -1,10 +1,11 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
-import { toggleIphoneFilter } from '../../redux/reducers/iphones-reducer';
+import { toggleIphoneFilter, changePrice } from '../../redux/reducers/iphones-reducer';
 import "../../styles/chooseType.scss"
 
-const CTBlockItem = (props) => {
+const CTBlockItem = React.memo((props) => {
+
 	let onClickHandler;
 	const dispatch = useDispatch();
 	const [isClicked, setIsClicked] = React.useState(false)
@@ -23,6 +24,7 @@ const CTBlockItem = (props) => {
 	React.useEffect(() => {
 		if (isClicked) {
 			dispatch(toggleIphoneFilter(props.blockName, props.name));
+			dispatch(changePrice(props.minPrice, props.maxPrice))
 		}
 
 	}, [isClicked])
@@ -35,6 +37,6 @@ const CTBlockItem = (props) => {
 			</label>
 		</div>
 	)
-}
+})
 
-export default React.memo(CTBlockItem)
+export default CTBlockItem
