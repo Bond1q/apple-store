@@ -10,7 +10,7 @@ const ProductSelectType = (props) => {
 			</div>
 			<div className="types">
 				{props.categories.length != 0 ? props.categories.map((item, index) => {
-					return <ProductSelectTypeItem name={item} key={index} activeCategory={props.activeCategory} />
+					return <ProductSelectTypeItem changeUrl={props.changeUrl} name={item} key={index} activeCategory={props.activeCategory} />
 				}) : ''}
 			</div>
 

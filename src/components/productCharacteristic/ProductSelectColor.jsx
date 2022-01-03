@@ -14,7 +14,7 @@ const ProductSelectColor = (props) => {
 			colorName = '#1f4870'
 			break;
 		case 'Silver':
-			colorName = '#a9a29a'
+			colorName = '#918b84'
 			break;
 		default:
 			break;
@@ -22,7 +22,7 @@ const ProductSelectColor = (props) => {
 
 
 	return (
-		<div className='productSelectColor'>
+		<div onClick={() => props.changeUrl(props.name)} className='productSelectColor'>
 			<div style={{ background: `${colorName}`, border: `2px solid ${colorName}` }}
 				className={classNames('dot', { activeColor: props.activeColor === props.name })}></div>
 			<div className={classNames("colorName", { activeColorName: props.activeColor === props.name })}>{props.name}</div>

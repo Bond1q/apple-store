@@ -5,7 +5,8 @@ import classNames from 'classnames'
 const ProductSelectTypeItem = (props) => {
 
 	return (
-		<div className={classNames('pstItem', { activeCategory: props.activeCategory === props.name })}>
+		<div onClick={() => props.changeUrl(props.name)}
+			className={classNames('pstItem', { activeCategory: props.activeCategory === props.name })}>
 			{props.name}
 		</div>
 	)

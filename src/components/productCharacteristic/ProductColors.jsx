@@ -13,7 +13,7 @@ const ProductColors = (props) => {
 			<div className="colors">
 
 				{props.colors.length != 0 ? props.colors.map((item, index) => {
-					return <ProductSelectColor name={item} key={index} activeColor={props.activeColor} />
+					return <ProductSelectColor changeUrl={props.changeUrl} name={item} key={index} activeColor={props.activeColor} />
 
 				}) : ''}
 			</div>
