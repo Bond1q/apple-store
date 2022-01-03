@@ -8,14 +8,15 @@ const initialState = {
 	colors: [],
 	activeSize: '',
 	activeColor: '',
-	price: 0
+	price: 0,
+	images: []
 }
 
 const iphoneItemReducer = (state = initialState, action) => {
 
 	switch (action.type) {
 		case SET_IPHONE_INFO:
-			let iphonePrice
+			let iphonePrice, imagesList = []
 			const sizesList = [], colorsList = []
 			const curIphoneInfo = action.url.split('/')[3].split('_')
 			const model = curIphoneInfo[0].replace('-', ' ')
@@ -31,10 +32,17 @@ const iphoneItemReducer = (state = initialState, action) => {
 					}
 					if (iphone.size == size && iphone.color == color) {
 						iphonePrice = iphone.price
+						imagesList = [iphone.imgUrl, ...iphone.moreImgs]
+
 					}
+
 				}
 			})
-			return { ...state, name: model, activeSize: size, activeColor: color, sizes: sizesList, colors: colorsList, price: iphonePrice }
+
+			return {
+				...state, name: model, activeSize: size, activeColor: color,
+				sizes: sizesList, colors: colorsList, price: iphonePrice, images: imagesList
+			}
 
 		default:
 			return state

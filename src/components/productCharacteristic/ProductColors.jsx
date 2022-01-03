@@ -3,7 +3,7 @@ import ProductSelectColor from './ProductSelectColor'
 import '../../styles/productColors.scss'
 
 const ProductColors = (props) => {
-	const colors = ['red', 'blue', 'white']
+	// const colors = ['red', 'blue', 'white']
 
 	return (
 		<div className='productColors'>
@@ -12,10 +12,10 @@ const ProductColors = (props) => {
 			</div>
 			<div className="colors">
 
-				{colors.map((item, index) => {
-					return <ProductSelectColor name={item} key={index} />
+				{props.colors.length != 0 ? props.colors.map((item, index) => {
+					return <ProductSelectColor name={item} key={index} activeColor={props.activeColor} />
 
-				})}
+				}) : ''}
 			</div>
 		</div>
 	)

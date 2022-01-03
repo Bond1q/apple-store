@@ -1,22 +1,22 @@
 {
 	"iphones":[
-		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg", "color": "Black", "price":799.99, "size": "128 GB"},
-		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg", "color": "Black", "price":899.99, "size": "256 GB" },
-		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg", "color": "Black", "price":999.99, "size": "512 GB"},
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg","moreImgs":["https://i.ibb.co/ZhG9hrK/12-black-2.jpg", "https://i.ibb.co/bHgbj2n/12-2.jpg"], "color": "Black", "price":799.99, "size": "128 GB"},
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg","moreImgs":["https://i.ibb.co/ZhG9hrK/12-black-2.jpg", "https://i.ibb.co/bHgbj2n/12-2.jpg"], "color": "Black", "price":899.99, "size": "256 GB" },
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg","moreImgs":["https://i.ibb.co/ZhG9hrK/12-black-2.jpg", "https://i.ibb.co/bHgbj2n/12-2.jpg"], "color": "Black", "price":999.99, "size": "512 GB"},
 		
-		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg", "color": "Blue", "price":799.99, "size": "128 GB"},
-		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg", "color": "Blue", "price":899.99, "size": "256 GB"},
-		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg", "color": "Blue", "price":999.99, "size": "512 GB"},
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg","moreImgs":["https://i.ibb.co/2g7ZsG2/12-blue-2.jpg", "https://i.ibb.co/bHgbj2n/12-2.jpg"], "color": "Blue", "price":799.99, "size": "128 GB"},
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg","moreImgs":["https://i.ibb.co/2g7ZsG2/12-blue-2.jpg", "https://i.ibb.co/bHgbj2n/12-2.jpg"], "color": "Blue", "price":899.99, "size": "256 GB"},
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg","moreImgs":["https://i.ibb.co/2g7ZsG2/12-blue-2.jpg", "https://i.ibb.co/bHgbj2n/12-2.jpg"], "color": "Blue", "price":999.99, "size": "512 GB"},
 		
-		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg", "color": "Blue", "price":799.99, "size": "128 GB" },
-		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg", "color": "Blue", "price":899.99, "size": "256 GB" },
-		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg", "color": "Blue", "price":999.99, "size": "512 GB"},
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg","moreImgs":["https://i.ibb.co/T8Hqp5Y/13-blue-2.jpg", "https://i.ibb.co/3cty3X0/13-blue-3.jpg"], "color": "Blue", "price":799.99, "size": "128 GB" },
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg","moreImgs":["https://i.ibb.co/T8Hqp5Y/13-blue-2.jpg", "https://i.ibb.co/3cty3X0/13-blue-3.jpg"], "color": "Blue", "price":899.99, "size": "256 GB" },
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg","moreImgs":["https://i.ibb.co/T8Hqp5Y/13-blue-2.jpg", "https://i.ibb.co/3cty3X0/13-blue-3.jpg"], "color": "Blue", "price":999.99, "size": "512 GB"},
 
-		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg", "color": "Black", "price":799.99, "size": "128 GB"},
-		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg", "color": "Black", "price":899.99, "size": "256 GB"},
-		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg", "color": "Black", "price":999.99, "size": "512 GB"},
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg","moreImgs":["https://i.ibb.co/r4q7yRK/13-black-3.jpg","https://i.ibb.co/jgkqpfW/13-black-2.jpg"], "color": "Black", "price":799.99, "size": "128 GB"},
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg","moreImgs":["https://i.ibb.co/r4q7yRK/13-black-3.jpg","https://i.ibb.co/jgkqpfW/13-black-2.jpg"], "color": "Black", "price":899.99, "size": "256 GB"},
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg","moreImgs":["https://i.ibb.co/r4q7yRK/13-black-3.jpg","https://i.ibb.co/jgkqpfW/13-black-2.jpg"], "color": "Black", "price":999.99, "size": "512 GB"},
 
-		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg", "color": "Siver", "price":1199.99, "size": "256 GB"},
-		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg", "color": "Siver", "price":1399.99, "size": "512 GB"}
+		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg","moreImgs":["https://i.ibb.co/HTmspgh/13-pro-max-2.jpg"], "color": "Silver", "price":1199.99, "size": "256 GB"},
+		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg","moreImgs":["https://i.ibb.co/HTmspgh/13-pro-max-2.jpg"], "color": "Silver", "price":1399.99, "size": "512 GB"}
 	]
 }

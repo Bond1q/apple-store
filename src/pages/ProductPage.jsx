@@ -10,35 +10,46 @@ import { useLocation } from 'react-router-dom';
 const ProductPage = () => {
 	const url = useLocation().pathname
 
-
-	const [name, sizes, colors, activeSize, activeColor, price] = useSelector(({ iphoneItemStore }) => {
+	const [isReady, seIsReady] = React.useState(true)
+	const [name, sizes, colors, activeSize, activeColor, price, images] = useSelector(({ iphoneItemStore }) => {
 		const i = iphoneItemStore
-		return [iphoneItemStore.name, i.sizes, i.color, i.activeSize, i.activeColor, i.price]
+		return [iphoneItemStore.name, i.sizes, i.colors, i.activeSize, i.activeColor, i.price, i.images]
 	})
 	const dispatch = useDispatch()
-
 	React.useEffect(() => {
 		dispatch(getIphoneInfo(url))
 	}, [])
+	React.useEffect(() => {
+		seIsReady(!isReady)
+	}, [name, sizes, colors, activeSize, activeColor, price, images])
+	console.log(isReady);
+	function numberWithSpaces(x) {
+		if (x) {
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		}
+		return
+	}
 	return (
-		<div className='productPage'>
-			<div className="sides">
-				<div className="side">
-					<PhotosCarousel />
+		<div>
+			{isReady && <div className='productPage'>
+				<div className="sides">
+					<div className="side">
+						<PhotosCarousel images={images} />
 
+					</div>
+					<div className="side">
+						<div className='model'>{name} ({activeColor})</div>
+						<div className="price">${numberWithSpaces(price)}</div>
+						<ProductSelectType categoryName={"Sizes"} categories={sizes} activeCategory={activeSize} />
+						<ProductColors colors={colors} activeColor={activeColor} />
+						<BtnsBuy />
+					</div>
 				</div>
-				<div className="side">
-					<div className='model'>iPhone 13 Pro Max (Blue)</div>
-					<div className="price">$999.99</div>
-					<ProductSelectType />
-
-					<ProductColors />
-					<BtnsBuy />
-				</div>
-
-			</div>
-
+			</div>}
 		</div>
+
+
+
 	)
 }
 

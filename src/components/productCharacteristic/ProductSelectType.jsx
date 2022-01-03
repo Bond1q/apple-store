@@ -3,16 +3,15 @@ import ProductSelectTypeItem from './ProductSelectTypeItem'
 import "../../styles/productSelectType.scss"
 
 const ProductSelectType = (props) => {
-	const names = ['64GB', '128GB']
 	return (
 		<div className='productSelectType'>
 			<div className='typeName'>
-				Size:
+				{props.categoryName}
 			</div>
 			<div className="types">
-				{names.map((item, index) => {
-					return <ProductSelectTypeItem name={item} key={index} />
-				})}
+				{props.categories.length != 0 ? props.categories.map((item, index) => {
+					return <ProductSelectTypeItem name={item} key={index} activeCategory={props.activeCategory} />
+				}) : ''}
 			</div>
 
 

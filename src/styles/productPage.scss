@@ -1,6 +1,9 @@
 @import "constants.scss";
 @import "mixins.scss";
 
+.isReadyToShow{
+	display: none;
+}
 .productPage {
 	// height: 800px;
 	max-width: 1100px;

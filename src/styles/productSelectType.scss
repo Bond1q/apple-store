@@ -29,6 +29,7 @@
 			border-radius: 3px;
 			transition: 500ms;
 
+
 			&:hover{
 				transition: 500ms;
 				cursor: pointer;
@@ -39,6 +40,13 @@
 
 			}
 		}
+		.activeCategory{
+			border: 1px solid rgb(255, 255, 255);
+				background: rgb(255, 255, 255);
+				color: #1d1d1d;
+				font-weight: 500;
+		}
+		
 	}
 	.colors{
 		@include row(100%, auto,center);
@@ -47,5 +55,8 @@
 
 		}
 	}
-
 }
+
+
+
+
