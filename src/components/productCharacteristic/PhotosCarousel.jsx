@@ -1,12 +1,10 @@
 import React from 'react'
-import img1 from '../../imgs/iphones/12/12_2.jpg'
-import img2 from '../../imgs/iphones/12/12_black_2.jpg'
-import img3 from '../../imgs/iphones/12/12_black.jpg'
 import Carousel from "react-simply-carousel";
 import '../../styles/photosCarousel.scss'
-const PhotosCarousel = (props) => {
+const PhotosCarousel = React.memo((props) => {
+	console.log('Rerender');
+
 	const [activeSlideIndex, setActiveSlideIndex] = React.useState(0)
-	// console.log(props.images);
 	return (
 		<div className='carousel'>
 			{props.images.length != 0 ?
@@ -87,7 +85,7 @@ const PhotosCarousel = (props) => {
 			</div>
 		</div>
 	)
-}
+})
 
 const SmallCarouselPhotos = (props) => {
 	return (

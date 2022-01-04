@@ -8,11 +8,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getIphoneInfo } from '../redux/reducers/iphoneItem-reducer';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+import loader from '../imgs/loader.gif'
 const ProductPage = () => {
 	const url = useLocation().pathname
 	const urlParts = url.split('/')[3].split('_')
-
-	console.log(urlParts);
 	const history = useHistory()
 	const [isReady, seIsReady] = React.useState(true)
 	const [name, sizes, colors, activeSize, activeColor, price, images] = useSelector(({ iphoneItemStore }) => {
@@ -26,7 +25,9 @@ const ProductPage = () => {
 	}, [url])
 
 	React.useEffect(() => {
+
 		seIsReady(!isReady)
+
 	}, [name, sizes, colors, activeSize, activeColor, price, images, url])
 
 	function numberWithSpaces(x) {
@@ -48,7 +49,7 @@ const ProductPage = () => {
 
 	return (
 		<div>
-			{isReady && <div className='productPage'>
+			{isReady ? <div className='productPage'>
 				<div className="sides">
 					<div className="side">
 						<PhotosCarousel images={images} />
@@ -62,7 +63,11 @@ const ProductPage = () => {
 						<BtnsBuy />
 					</div>
 				</div>
-			</div>}
+			</div> :
+				<div className='loader'>
+					<img src={loader} alt="" />
+				</div>}
+
 		</div>
 
 

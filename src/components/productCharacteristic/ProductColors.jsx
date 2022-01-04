@@ -2,7 +2,7 @@ import React from 'react'
 import ProductSelectColor from './ProductSelectColor'
 import '../../styles/productColors.scss'
 
-const ProductColors = (props) => {
+const ProductColors = React.memo((props) => {
 	// const colors = ['red', 'blue', 'white']
 
 	return (
@@ -20,6 +20,14 @@ const ProductColors = (props) => {
 		</div>
 	)
 }
+
+	, (prevProps, nextProps) => {
+		if (prevProps.activeCategory !== nextProps.activeCategory) {
+			return false
+		} else {
+			return true
+		}
+	})
 
 export default ProductColors
 

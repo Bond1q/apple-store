@@ -12,4 +12,6 @@ const ProductSelectTypeItem = (props) => {
 	)
 }
 
+
+
 export default ProductSelectTypeItem

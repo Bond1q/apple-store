@@ -29,5 +29,12 @@ const ProductSelectColor = (props) => {
 		</div>
 	)
 }
+// , (prevProps, nextProps) => {
+// 	if (prevProps.activeColor !== nextProps.activeColor) {
+// 		return false
+// 	} else {
+// 		return true
+// 	}
+// })
 
 export default ProductSelectColor

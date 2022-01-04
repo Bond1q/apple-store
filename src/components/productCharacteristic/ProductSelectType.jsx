@@ -2,7 +2,8 @@ import React from 'react'
 import ProductSelectTypeItem from './ProductSelectTypeItem'
 import "../../styles/productSelectType.scss"
 
-const ProductSelectType = (props) => {
+const ProductSelectType = React.memo((props) => {
+
 	return (
 		<div className='productSelectType'>
 			<div className='typeName'>
@@ -13,17 +14,16 @@ const ProductSelectType = (props) => {
 					return <ProductSelectTypeItem changeUrl={props.changeUrl} name={item} key={index} activeCategory={props.activeCategory} />
 				}) : ''}
 			</div>
-
-
-			{/* <div className='typeName'>
-				Colors
-				{colors.map((item, index) => {
-					<Pro name={item} key={index}/>
-				})}
-				
-			</div> */}
 		</div>
 	)
 }
+	, (prevProps, nextProps) => {
+		if (prevProps.activeCategory !== nextProps.activeCategory) {
+			return false
+		} else {
+			return true
+		}
+	})
+
 
 export default ProductSelectType
