@@ -2,7 +2,6 @@ import React from 'react'
 import Carousel from "react-simply-carousel";
 import '../../styles/photosCarousel.scss'
 const PhotosCarousel = React.memo((props) => {
-	console.log('Rerender');
 
 	const [activeSlideIndex, setActiveSlideIndex] = React.useState(0)
 	return (

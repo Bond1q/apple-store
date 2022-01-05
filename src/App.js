@@ -3,7 +3,7 @@ import IphonesPage from "./pages/IphonesPage";
 import { Redirect, Route, Switch } from 'react-router-dom';
 import ProductPage from "./pages/ProductPage";
 import Bag from "./pages/Bag";
-
+import spinner from './imgs/loader.gif'
 
 function App() {
 
@@ -16,7 +16,6 @@ function App() {
 				<Route path='/bag'><Bag /></Route>
 				<Route path='/'><Redirect to='/iphones' /></Route>
 			</Switch>
-
 		</div>
 	);
 }

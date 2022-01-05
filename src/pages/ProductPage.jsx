@@ -6,19 +6,23 @@ import ProductColors from '../components/productCharacteristic/ProductColors';
 import BtnsBuy from '../components/productCharacteristic/BtnsBuy';
 import { useDispatch, useSelector } from 'react-redux';
 import { getIphoneInfo } from '../redux/reducers/iphoneItem-reducer';
-import { useLocation } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import loader from '../imgs/loader.gif'
+import { addItemToBag } from '../redux/reducers/bag-reducer';
+import { numberWithSpaces } from '../assets/numberWuthSpace';
+
 const ProductPage = () => {
 	const url = useLocation().pathname
 	const urlParts = url.split('/')[3].split('_')
 	const history = useHistory()
 	const [isReady, seIsReady] = React.useState(true)
+	const dispatch = useDispatch()
 	const [name, sizes, colors, activeSize, activeColor, price, images] = useSelector(({ iphoneItemStore }) => {
 		const i = iphoneItemStore
 		return [iphoneItemStore.name, i.sizes, i.colors, i.activeSize, i.activeColor, i.price, i.images]
 	})
-	const dispatch = useDispatch()
+
+	const fullName = `${name} ${activeSize} (${activeColor})`
 
 	React.useEffect(() => {
 		dispatch(getIphoneInfo(url))
@@ -30,12 +34,7 @@ const ProductPage = () => {
 
 	}, [name, sizes, colors, activeSize, activeColor, price, images, url])
 
-	function numberWithSpaces(x) {
-		if (x) {
-			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-		}
-		return
-	}
+
 
 	const changeUrl = (characteristic) => {
 		if (sizes.includes(characteristic)) {
@@ -47,6 +46,12 @@ const ProductPage = () => {
 		}
 	}
 
+	const addIphoneToBag = (
+		() => {
+			dispatch(addItemToBag({ name: fullName, img: images[0], url: url, price: price }))
+		})
+
+	console.log('Rerender');
 	return (
 		<div>
 			{isReady ? <div className='productPage'>
@@ -60,7 +65,7 @@ const ProductPage = () => {
 						<div className="price">${numberWithSpaces(price)}</div>
 						<ProductSelectType changeUrl={changeUrl} categoryName={"Sizes"} categories={sizes} activeCategory={activeSize} />
 						<ProductColors changeUrl={changeUrl} colors={colors} activeColor={activeColor} />
-						<BtnsBuy />
+						<BtnsBuy addToBag={addIphoneToBag} />
 					</div>
 				</div>
 			</div> :

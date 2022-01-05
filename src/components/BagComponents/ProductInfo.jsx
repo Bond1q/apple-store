@@ -1,30 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import iphone from '../../imgs/13_black.jpg'
-const ProductInfo = () => {
+const ProductInfo = (props) => {
 	return (
 		<div className='productInfo'>
 			<div className="bagRow">
 				<div className="productPhoto">
-					<img src={iphone} alt="" />
+					<img src={props.img} alt="" />
 				</div>
 				<div className="info">
 					<div className="productName">
-						iPhone 12 Pro Max 164GB (White)
+						<Link to={props.url}>{props.name}</Link>
 					</div>
 					<div className="counter">
-						<button>+</button>
-						<div className="count">2</div>
-						<button>-</button>
+						<button onClick={() => props.onIncreaseCounter(props.name)}>+</button>
+						<div className="count">{props.count}</div>
+						<button onClick={() => props.onDecreaseCounter(props.name)} className='minus'>‒</button>
 					</div>
 					<div className="smallPriceRow">
-						<div className="price">1400$</div>
-						<div className="deleteProduct">×</div>
+						<div className="price">{props.price}$</div>
+						<div onClick={() => props.onDeleteItemFromBag(props.name)} className="deleteProduct">×</div>
 					</div>
-
 				</div>
-
 			</div>
-
 		</div>
 	)
 }

@@ -3,7 +3,6 @@ import ProductSelectColor from './ProductSelectColor'
 import '../../styles/productColors.scss'
 
 const ProductColors = React.memo((props) => {
-	// const colors = ['red', 'blue', 'white']
 
 	return (
 		<div className='productColors'>
