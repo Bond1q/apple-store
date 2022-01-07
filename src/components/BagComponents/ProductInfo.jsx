@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import iphone from '../../imgs/13_black.jpg'
 const ProductInfo = (props) => {
 	return (
 		<div className='productInfo'>

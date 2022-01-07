@@ -1,71 +1,76 @@
 @import "mixins.scss";
 @import "constants.scss";
-.header{
+
+.header {
 	width: 100%;
-	font-size: 18px;	
+	font-size: 18px;
 	padding: 15px 0;
 	color: white;
 	margin-bottom: 10px;
 	background: $main-color;
-	.bigRowHeader{
-		@include row(600px, space-between,center);
 
-		.appleLogo{
-			img{
+	.bigRowHeader {
+		@include row(600px, space-between, center);
+
+		.appleLogo {
+			img {
 				width: 35px
 			}
 		}
 
-		.bagHeader{
+		.bagHeader {
 			position: relative;
 			padding: 4px;
 			border-radius: 2px;
 			transition: 0.7s;
-			&:hover{
-			transition: 0.7s;
 
-			background: rgb(71, 71, 71);
+			&:hover {
+				transition: 0.7s;
+
+				background: rgb(71, 71, 71);
 
 				cursor: pointer;
 			}
 
-			img{
+			img {
 				width: 25px;
 			}
-			.counter{
-				img{
+
+			.counter {
+				img {
 					width: 21px;
 					padding-top: 6px;
-			  }
-				
+				}
+
 				position: absolute;
 				top:-3px;
 				right: -4px;
-				.counterNum{
+
+				.counterNum {
 					font-size: 9px;
 					position: absolute;
 					top: 2.6px;
 					right: 7px;
 				}
 			}
-			
+
 		}
 
 
 
-		.smallRowHeader{
-			@include row(300px, space-between,center );
+		.smallRowHeader {
+			@include row(300px, space-between, center);
 
-			a{
+			a {
 				display: inline-block;
 				padding: 3px 10px;
 				border-radius: 2px;
 				transition: 0.7s;
 
-				&:hover{
-				transition: 0.7s;
+				&:hover {
+					transition: 0.7s;
 
-				background: rgb(71, 71, 71);
+					background: rgb(71, 71, 71);
 				}
 			}
 		}
@@ -73,8 +78,19 @@
 
 
 	}
-	.activePage{
+
+	.activePage {
 		// background: rgb(71, 71, 71);
 		font-weight: bold;
 	}
+
+	.activeBag {
+		img {
+			background-image: url('../imgs/activeBag.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+
+	}
+
 }

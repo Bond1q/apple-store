@@ -167,5 +167,64 @@
 
 			}
 		}
+
+		&.disabled {
+			button {
+				background: rgb(255, 133, 147);
+
+				&:hover {
+					cursor: default;
+				}
+			}
+		}
 	}
+
+
+	.emptyBag {
+		// padding-left: 25px;
+		font-size: 35px;
+		text-align: center;
+		padding-bottom: 50px;
+	}
+
+
+	.modal {
+		height: 100vh;
+		width: 100vw;
+		background: rgba(0, 0, 0, 0.4);
+		position: fixed;
+		top: -100px;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: 0.5s;
+		pointer-events: none;
+
+
+	}
+
+	.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	.modalContent {
+		padding: 20px;
+		border-radius: 12px;
+		background: #535151;
+		// height: 400px;
+		width: 500px;
+		transform: scale(0.5);
+		transition: 0.4s all;
+		font-size: 30px;
+		text-align: center;
+
+		&.active {
+			transform: scale(1);
+		}
+	}
+
+
 }

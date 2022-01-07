@@ -3,6 +3,7 @@ const GET_ITEMS_FROM_BAG = 'GET_ITEMS_FROM_BAG'
 const INCREASE_ITEM_COUNT = 'INCREASE_ITEM_COUNT'
 const DECREASE_ITEM_COUNT = 'DECREASE_ITEM_COUNT'
 const DELETE_ITEM_FROM_BAG = 'DELETE_ITEM_FROM_BAG'
+const DELETE_ALL_ITEMS_FROM_BAG = 'DELETE_ALL_ITEMS_FROM_BAG'
 
 const initialState = {
 	items: [],
@@ -82,6 +83,9 @@ const bagReducer = (state = initialState, action) => {
 			toSumPrice()
 			return { ...state, totalPrice: price }
 
+		case DELETE_ALL_ITEMS_FROM_BAG:
+			return { ...state, items: [], totalPrice: 0 }
+
 		default:
 			return state;
 	}
@@ -93,5 +97,6 @@ export const getItemsFromBag = () => ({ type: GET_ITEMS_FROM_BAG })
 export const increaseItemCount = (name) => ({ type: INCREASE_ITEM_COUNT, name })
 export const decreaseItemCount = (name) => ({ type: DECREASE_ITEM_COUNT, name })
 export const deleteItemFromBag = (name) => ({ type: DELETE_ITEM_FROM_BAG, name })
+export const deleteAllItemsFromBag = () => ({ type: DELETE_ALL_ITEMS_FROM_BAG })
 
 export default bagReducer

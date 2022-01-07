@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link, NavLink, Route } from 'react-router-dom'
+import { NavLink, Route } from 'react-router-dom'
 import appleLogo from "../imgs/appleLogo.png"
 import bag from "../imgs/bag.png"
-import cart from "../imgs/cart.png"
+
 
 import "../styles/header.scss"
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
@@ -22,7 +22,7 @@ const Header = React.memo((props) => {
 					<NavLink to="/ipads">iPad</NavLink>
 					<NavLink to="/macs">Mac</NavLink>
 				</div>
-				<Link to="/bag">
+				<NavLink to="/bag" className={isActive => isActive ? 'activeBag' : ''}>
 					<div className="bagHeader">
 						<img src={bag} alt="" />
 						{/* 
@@ -31,7 +31,7 @@ const Header = React.memo((props) => {
 								<div className="counterNum">5</div>
 							</div> */}
 					</div>
-				</Link>
+				</NavLink>
 			</div>
 		</div>
 	)

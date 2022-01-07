@@ -7,9 +7,9 @@ import BtnsBuy from '../components/productCharacteristic/BtnsBuy';
 import { useDispatch, useSelector } from 'react-redux';
 import { getIphoneInfo } from '../redux/reducers/iphoneItem-reducer';
 import { useLocation, useHistory } from 'react-router-dom';
-import loader from '../imgs/loader.gif'
 import { addItemToBag } from '../redux/reducers/bag-reducer';
 import { numberWithSpaces } from '../assets/numberWuthSpace';
+import Loader from '../components/Loader';
 
 const ProductPage = () => {
 	const url = useLocation().pathname
@@ -29,9 +29,7 @@ const ProductPage = () => {
 	}, [url])
 
 	React.useEffect(() => {
-
 		seIsReady(!isReady)
-
 	}, [name, sizes, colors, activeSize, activeColor, price, images, url])
 
 
@@ -46,12 +44,11 @@ const ProductPage = () => {
 		}
 	}
 
-	const addIphoneToBag = (
-		() => {
-			dispatch(addItemToBag({ name: fullName, img: images[0], url: url, price: price }))
-		})
+	const addIphoneToBag = () => {
+		dispatch(addItemToBag({ name: fullName, img: images[0], url: url, price: price }))
+	}
 
-	console.log('Rerender');
+
 	return (
 		<div>
 			{isReady ? <div className='productPage'>
@@ -69,9 +66,7 @@ const ProductPage = () => {
 					</div>
 				</div>
 			</div> :
-				<div className='loader'>
-					<img src={loader} alt="" />
-				</div>}
+				<Loader />}
 
 		</div>
 
