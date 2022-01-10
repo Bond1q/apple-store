@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/apple-store/static/css/main.90830d70.chunk.css",
-    "main.js": "/apple-store/static/js/main.ddbb77f9.chunk.js",
-    "main.js.map": "/apple-store/static/js/main.ddbb77f9.chunk.js.map",
+    "main.js": "/apple-store/static/js/main.ed1be120.chunk.js",
+    "main.js.map": "/apple-store/static/js/main.ed1be120.chunk.js.map",
     "runtime-main.js": "/apple-store/static/js/runtime-main.967c6a80.js",
     "runtime-main.js.map": "/apple-store/static/js/runtime-main.967c6a80.js.map",
     "static/js/2.003bccfe.chunk.js": "/apple-store/static/js/2.003bccfe.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.967c6a80.js",
     "static/js/2.003bccfe.chunk.js",
     "static/css/main.90830d70.chunk.css",
-    "static/js/main.ddbb77f9.chunk.js"
+    "static/js/main.ed1be120.chunk.js"
   ]
 }
