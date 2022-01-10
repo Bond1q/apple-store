@@ -1,0 +1,51 @@
+{
+	"iphones":[
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg","moreImgs":["https://i.ibb.co/ZhG9hrK/12-black-2.jpg", "https://i.ibb.co/swmknwk/12-2.jpg"], "color": "Black", "price":799.99, "size": "128 GB"},
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg","moreImgs":["https://i.ibb.co/ZhG9hrK/12-black-2.jpg", "https://i.ibb.co/swmknwk/12-2.jpg"], "color": "Black", "price":899.99, "size": "256 GB" },
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/QQXJzGk/12-black.jpg","moreImgs":["https://i.ibb.co/ZhG9hrK/12-black-2.jpg", "https://i.ibb.co/swmknwk/12-2.jpg"], "color": "Black", "price":999.99, "size": "512 GB"},
+		
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg","moreImgs":["https://i.ibb.co/2g7ZsG2/12-blue-2.jpg", "https://i.ibb.co/swmknwk/12-2.jpg"], "color": "Blue", "price":799.99, "size": "128 GB"},
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg","moreImgs":["https://i.ibb.co/2g7ZsG2/12-blue-2.jpg", "https://i.ibb.co/swmknwk/12-2.jpg"], "color": "Blue", "price":899.99, "size": "256 GB"},
+		{"name":"iPhone 12", "imgUrl":"https://i.ibb.co/fn92CBN/12-blue.jpg","moreImgs":["https://i.ibb.co/2g7ZsG2/12-blue-2.jpg", "https://i.ibb.co/swmknwk/12-2.jpg"], "color": "Blue", "price":999.99, "size": "512 GB"},
+		
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg","moreImgs":["https://i.ibb.co/T8Hqp5Y/13-blue-2.jpg", "https://i.ibb.co/3cty3X0/13-blue-3.jpg"], "color": "Blue", "price":799.99, "size": "128 GB" },
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg","moreImgs":["https://i.ibb.co/T8Hqp5Y/13-blue-2.jpg", "https://i.ibb.co/3cty3X0/13-blue-3.jpg"], "color": "Blue", "price":899.99, "size": "256 GB" },
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/80CPt9h/13-blue.jpg","moreImgs":["https://i.ibb.co/T8Hqp5Y/13-blue-2.jpg", "https://i.ibb.co/3cty3X0/13-blue-3.jpg"], "color": "Blue", "price":999.99, "size": "512 GB"},
+
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg","moreImgs":["https://i.ibb.co/r4q7yRK/13-black-3.jpg","https://i.ibb.co/jgkqpfW/13-black-2.jpg"], "color": "Black", "price":799.99, "size": "128 GB"},
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg","moreImgs":["https://i.ibb.co/r4q7yRK/13-black-3.jpg","https://i.ibb.co/jgkqpfW/13-black-2.jpg"], "color": "Black", "price":899.99, "size": "256 GB"},
+		{"name":"iPhone 13", "imgUrl":"https://i.ibb.co/MVrGnF9/13-black.jpg","moreImgs":["https://i.ibb.co/r4q7yRK/13-black-3.jpg","https://i.ibb.co/jgkqpfW/13-black-2.jpg"], "color": "Black", "price":999.99, "size": "512 GB"},
+
+		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg","moreImgs":["https://i.ibb.co/HTmspgh/13-pro-max-2.jpg"], "color": "Silver", "price":1199.99, "size": "256 GB"},
+		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg","moreImgs":["https://i.ibb.co/HTmspgh/13-pro-max-2.jpg"], "color": "Silver", "price":1399.99, "size": "512 GB"}
+	],
+	"ipads":[
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/ZH4m9v1/Apple-i-Pad-10-2-64-GB-Wi-Fi-Silver-2021-MK2-L3.jpg",
+			"moreImgs":["https://i.ibb.co/dpJJnQm/Apple-i-Pad-10-2-64-GB-Wi-Fi-Silver-2021-MK2-L3-2.jpg"],
+			"color":"Silver","price":849.99, "size":"64 GB"
+		},
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/ZH4m9v1/Apple-i-Pad-10-2-64-GB-Wi-Fi-Silver-2021-MK2-L3.jpg",
+			"moreImgs":["https://i.ibb.co/dpJJnQm/Apple-i-Pad-10-2-64-GB-Wi-Fi-Silver-2021-MK2-L3-2.jpg"],
+			"color":"Silver","price":1049.99, "size":"128 GB"
+		},
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/p1gCDyV/Apple-i-Pad-10-2-64-GB-Wi-Fi-Space-Gray-2021-MK2-K3.jpg",
+			"moreImgs":["https://i.ibb.co/zfjgNnb/Apple-i-Pad-10-2-64-GB-Wi-Fi-Space-Gray-2021-MK2-K3-2.jpg"],
+			"color":"Space Gray","price":849.99, "size":"64 GB"
+		},
+
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/p1gCDyV/Apple-i-Pad-10-2-64-GB-Wi-Fi-Space-Gray-2021-MK2-K3.jpg",
+			"moreImgs":["https://i.ibb.co/zfjgNnb/Apple-i-Pad-10-2-64-GB-Wi-Fi-Space-Gray-2021-MK2-K3-2.jpg"],
+			"color":"Space Gray","price":1049.99, "size":"128 GB"
+		},
+
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/pZYB90m/Apple-i-Pad-10-2-32-GB-LTE-Gold-MYMK2-2020.jpg",
+			"moreImgs":["https://i.ibb.co/pZYB90m/Apple-i-Pad-10-2-32-GB-LTE-Gold-MYMK2-2020.jpg"],
+			"color":"Pink","price":849.99, "size":"64 GB"
+		},
+
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/pZYB90m/Apple-i-Pad-10-2-32-GB-LTE-Gold-MYMK2-2020.jpg",
+			"moreImgs":["https://i.ibb.co/pZYB90m/Apple-i-Pad-10-2-32-GB-LTE-Gold-MYMK2-2020.jpg"],
+			"color":"Pink","price":1049.99, "size":"128 GB"
+		}
+	]
+}
