@@ -19,8 +19,8 @@ const Header = React.memo((props) => {
 
 				<div className="smallRowHeader">
 					<NavLink to="/iphones" className={isActive => isActive ? 'activePage' : ''} >iPhone</NavLink>
-					<NavLink to="/ipads">iPad</NavLink>
-					<NavLink to="/macs">Mac</NavLink>
+					<NavLink to="/ipads" className={isActive => isActive ? 'activePage' : ''}>iPad</NavLink>
+					<NavLink to="/macbooks" className={isActive => isActive ? 'activePage' : ''}>Mac</NavLink>
 				</div>
 				<NavLink to="/bag" className={isActive => isActive ? 'activeBag' : ''}>
 					<div className="bagHeader">

@@ -43,4 +43,224 @@
 			}
 		}
 	}
+
+
+	.carousel {
+		button {
+			transition: 400ms;
+
+			&:hover {
+				color: #ffff !important;
+				transition: 400ms;
+			}
+		}
+
+
+		.image {
+			background-size: 275px !important;
+			background-repeat: no-repeat !important;
+
+		}
+
+		.smallPhotos {
+			@include row(200px, space-between, center);
+			margin-top: 15px;
+			margin-left: 150px;
+
+			.smallPhoto {
+				img {
+					width: 45px;
+					height: 45px;
+					cursor: pointer;
+				}
+
+			}
+
+		}
+	}
+
+	.productSelectType {
+
+
+		font-size: 20px;
+		padding-left: 15px;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: -40px;
+			left: 0;
+			content: url("../imgs/linePoductPage.png");
+
+		}
+
+		.typeName {
+			margin-top: 40px;
+
+			margin-bottom: 10px;
+		}
+
+		.types {
+			@include row(100%, auto, center);
+
+			.pstItem {
+				font-size: 17px;
+				border: 1px solid rgb(95, 95, 95);
+				padding: 3px 6px;
+				margin-right: 18px;
+				font-weight: 500;
+				border-radius: 3px;
+				transition: 500ms;
+
+
+				&:hover {
+					transition: 500ms;
+					cursor: pointer;
+					border: 1px solid rgb(255, 255, 255);
+					background: rgb(255, 255, 255);
+					color: #1d1d1d;
+					font-weight: 500;
+
+				}
+			}
+
+			.activeCategory {
+				border: 1px solid rgb(255, 255, 255);
+				background: rgb(255, 255, 255);
+				color: #1d1d1d;
+				font-weight: 500;
+			}
+
+		}
+
+		.colors {
+			@include row(100%, auto, center);
+
+			.productSelectColor {
+				margin-right: 18px;
+
+			}
+		}
+	}
+
+	.productColors {
+
+
+		font-size: 20px;
+		padding-left: 15px;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: -40px;
+			left: 0;
+			content: url("../imgs/linePoductPage.png");
+
+		}
+
+		.typeName {
+			margin-top: 40px;
+			margin-bottom: 15px;
+		}
+
+		.colors {
+			display: flex;
+			padding-left: 5px;
+
+			.productSelectColor {
+				@include column(100%, center, center);
+				transition: 400ms;
+				margin-right: 45px;
+
+				.dot {
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					margin-bottom: 3px;
+					transition: 400ms;
+				}
+
+				.colorName {
+					transition: 400ms;
+					font-size: 18px;
+					color: rgb(149, 148, 148);
+				}
+
+				&:hover {
+					cursor: pointer;
+
+					.dot {
+						border: 2px solid rgb(184, 184, 184) !important;
+					}
+
+					.colorName {
+						color: rgb(255, 255, 255);
+					}
+				}
+
+				.activeColor {
+					border: 2px solid rgb(184, 184, 184) !important;
+				}
+
+				.activeColorName {
+					color: rgb(255, 255, 255);
+				}
+			}
+		}
+	}
+
+	.btnsBuy {
+		@include row(100%, start, center);
+		padding-left: 15px;
+		margin-top: 60px;
+		margin-bottom: 70px;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: -50px;
+			left: 0;
+			content: url("../imgs/linePoductPage.png");
+
+		}
+
+		button {
+			border: none;
+			width: 200px;
+			height: 45px;
+			font-size: 16px;
+			font-weight: 600;
+			transition: 400ms;
+
+			color: #fff;
+
+			&:hover {
+				cursor: pointer;
+				box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.6);
+
+			}
+		}
+
+		.btnBuy {
+			margin-right: 20px;
+		}
+
+		.btnBuy {
+			button {
+				background: rgb(199, 35, 38);
+				line-height: 0;
+
+
+			}
+		}
+
+		.btnAddCart {
+			button {
+				background: rgba(0, 85, 255, 0.857);
+				position: relative;
+
+			}
+		}
+	}
+
 }

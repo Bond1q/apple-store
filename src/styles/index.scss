@@ -28,3 +28,29 @@ a {
 		width: 125px;
 	}
 }
+
+.notAvailible {
+	font-size: 30px;
+	text-align: center;
+	margin-top: 50px;
+
+	.back {
+		margin-top: 20px;
+
+		button {
+			background: none;
+			color: #fff;
+			border: 1px solid rgb(177, 177, 177);
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			transition: 400ms;
+
+			&:hover {
+				cursor: pointer;
+				transition: 400ms;
+				border: 1px solid rgb(255, 255, 255);
+			}
+		}
+	}
+}

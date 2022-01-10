@@ -16,6 +16,12 @@ const ProductSelectColor = (props) => {
 		case 'Silver':
 			colorName = '#918b84'
 			break;
+		case 'Space Gray':
+			colorName = '#65737e'
+			break;
+		case 'Pink':
+			colorName = '#ffc0cb'
+			break;
 		default:
 			break;
 	}

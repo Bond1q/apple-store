@@ -1,6 +1,5 @@
 import React from 'react'
 import ProductSelectTypeItem from './ProductSelectTypeItem'
-import "../../styles/productSelectType.scss"
 
 const ProductSelectType = React.memo((props) => {
 

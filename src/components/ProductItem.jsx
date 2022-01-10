@@ -15,10 +15,12 @@ const ProductItem = ({ name, color, price, img, size, isVisible }) => {
 		case '/iphones':
 			url = `/iphones/iphone/${urlModel}_${urlSize}_${color}`
 			break;
+		case '/ipads':
+			url = `/ipads/ipad/${urlModel}_${urlSize}_${color}`
+			break;
 		default:
 			break;
 	}
-
 	return (
 		<Link
 			className={classNames('productItem', { hideElem: !isVisible })}

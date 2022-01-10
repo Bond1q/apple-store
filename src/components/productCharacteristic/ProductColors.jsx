@@ -1,6 +1,5 @@
 import React from 'react'
 import ProductSelectColor from './ProductSelectColor'
-import '../../styles/productColors.scss'
 
 const ProductColors = React.memo((props) => {
 

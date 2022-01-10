@@ -18,5 +18,34 @@
 
 		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg","moreImgs":["https://i.ibb.co/HTmspgh/13-pro-max-2.jpg"], "color": "Silver", "price":1199.99, "size": "256 GB"},
 		{"name":"iPhone 13 Pro Max", "imgUrl":"https://i.ibb.co/3hHLqqX/13-pro-max.jpg","moreImgs":["https://i.ibb.co/HTmspgh/13-pro-max-2.jpg"], "color": "Silver", "price":1399.99, "size": "512 GB"}
+	],
+	"ipads":[
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/ZH4m9v1/Apple-i-Pad-10-2-64-GB-Wi-Fi-Silver-2021-MK2-L3.jpg",
+			"moreImgs":["https://i.ibb.co/dpJJnQm/Apple-i-Pad-10-2-64-GB-Wi-Fi-Silver-2021-MK2-L3-2.jpg"],
+			"color":"Silver","price":849.99, "size":"64 GB"
+		},
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/ZH4m9v1/Apple-i-Pad-10-2-64-GB-Wi-Fi-Silver-2021-MK2-L3.jpg",
+			"moreImgs":["https://i.ibb.co/dpJJnQm/Apple-i-Pad-10-2-64-GB-Wi-Fi-Silver-2021-MK2-L3-2.jpg"],
+			"color":"Silver","price":1049.99, "size":"128 GB"
+		},
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/p1gCDyV/Apple-i-Pad-10-2-64-GB-Wi-Fi-Space-Gray-2021-MK2-K3.jpg",
+			"moreImgs":["https://i.ibb.co/zfjgNnb/Apple-i-Pad-10-2-64-GB-Wi-Fi-Space-Gray-2021-MK2-K3-2.jpg"],
+			"color":"Space Gray","price":849.99, "size":"64 GB"
+		},
+
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/p1gCDyV/Apple-i-Pad-10-2-64-GB-Wi-Fi-Space-Gray-2021-MK2-K3.jpg",
+			"moreImgs":["https://i.ibb.co/zfjgNnb/Apple-i-Pad-10-2-64-GB-Wi-Fi-Space-Gray-2021-MK2-K3-2.jpg"],
+			"color":"Space Gray","price":1049.99, "size":"128 GB"
+		},
+
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/pZYB90m/Apple-i-Pad-10-2-32-GB-LTE-Gold-MYMK2-2020.jpg",
+			"moreImgs":["https://i.ibb.co/pZYB90m/Apple-i-Pad-10-2-32-GB-LTE-Gold-MYMK2-2020.jpg"],
+			"color":"Pink","price":849.99, "size":"64 GB"
+		},
+
+		{"name":"iPad 10.2 2021", "imgUrl":"https://i.ibb.co/pZYB90m/Apple-i-Pad-10-2-32-GB-LTE-Gold-MYMK2-2020.jpg",
+			"moreImgs":["https://i.ibb.co/pZYB90m/Apple-i-Pad-10-2-32-GB-LTE-Gold-MYMK2-2020.jpg"],
+			"color":"Pink","price":1049.99, "size":"128 GB"
+		}
 	]
 }
