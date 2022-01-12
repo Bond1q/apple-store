@@ -23,14 +23,14 @@ const iphoneItemReducer = (state = initialState, action) => {
 			const size = curIphoneInfo[1].replace('-', ' ')
 			const color = curIphoneInfo[2]
 			action.iphones.forEach(iphone => {
-				if (iphone.name == model) {
+				if (iphone.name === model) {
 					if (!sizesList.includes(iphone.size)) {
 						sizesList.push(iphone.size)
 					}
 					if (!colorsList.includes(iphone.color)) {
 						colorsList.push(iphone.color)
 					}
-					if (iphone.size == size && iphone.color == color) {
+					if (iphone.size === size && iphone.color === color) {
 						iphonePrice = iphone.price
 						imagesList = [iphone.imgUrl, ...iphone.moreImgs]
 

@@ -7,6 +7,12 @@
 	@media only screen and (max-width : 1700px) {
 		@include row(960px, auto, center);
 		margin-left: auto;
+	}
+
+	@media only screen and (max-width : 500px) {
+		// display: none;
+		width: 100%;
+		justify-content: center;
 
 
 	}
@@ -17,6 +23,10 @@
 
 	@media only screen and (max-width : 1700px) {
 		@include row(1290px, space-between, auto);
+	}
 
+	@media only screen and (max-width : 500px) {
+		width: 100%;
+		// display: none;
 	}
 }

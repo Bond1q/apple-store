@@ -4,16 +4,18 @@ import Carousel from "react-simply-carousel";
 const PhotosCarousel = React.memo((props) => {
 
 	const [activeSlideIndex, setActiveSlideIndex] = React.useState(0)
+	const pixels = window.innerWidth;
+	const width = pixels > 500 ? '450px' : '200px'
 	return (
 		<div className='carousel'>
-			{props.images.length != 0 ?
+			{props.images.length !== 0 ?
 				<Carousel
 					activeSlideIndex={activeSlideIndex}
 					containerProps={{
 						style: {
 							position: "relative",
 							background: "#1d1d1d",
-							width: "450px",
+							width: { width },
 							justifyContent: 'left',
 							marginLeft: '30px',
 							marginTop: '0px'
@@ -63,7 +65,7 @@ const PhotosCarousel = React.memo((props) => {
 					}}
 				>
 
-					{props.images.length != 0 ? props.images.map((img, index) => {
+					{props.images.length !== 0 ? props.images.map((img, index) => {
 						return <div key={index} className='image' style={{
 							width: 300, height: 400,
 							backgroundImage: `url(${img})`, backgroundPosition: 'center'
@@ -76,7 +78,7 @@ const PhotosCarousel = React.memo((props) => {
 
 			<div className="smallPhotos">
 
-				{props.images.length != 0 ? props.images.map((img, index) => {
+				{props.images.length !== 0 ? props.images.map((img, index) => {
 					return <SmallCarouselPhotos index={index} key={index} setActiveSlideIndex={setActiveSlideIndex} img={img} />
 
 				}) : ''}

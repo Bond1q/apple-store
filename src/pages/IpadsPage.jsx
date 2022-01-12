@@ -22,7 +22,7 @@ const IpadsPage = React.memo(() => {
 		seIsReady(!isReady)
 	}, [ipads, maxPrice, minPrice, models, sizes, colors])
 
-	const items = ipads.length != 0 ? ipads.map((item, index) => {
+	const items = ipads.length !== 0 ? ipads.map((item, index) => {
 		return <ProductItem isVisible={item.isVisible} name={item.name} img={item.imgUrl} color={item.color} price={item.price} key={index} size={item.size} />
 	}) : false
 	const typeContainer = React.useMemo(() => {

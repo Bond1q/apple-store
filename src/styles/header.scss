@@ -93,4 +93,77 @@
 
 	}
 
+	.mobileScreen {
+		display: none;
+	}
+
+}
+
+@media only screen and (max-width : 500px) {
+	.header {
+		// max-width: 500px;
+		position: relative;
+
+		.bigRowHeader {
+			width: 100%;
+
+			padding: 0 10px;
+
+			.smallRowHeader {
+				display: none;
+				width: 0px;
+
+
+			}
+		}
+
+		.mobileScreen {
+			display: block;
+
+		}
+
+		.smallScreenCategories {
+			z-index: 100;
+			transition: 400ms;
+			border-top: 1px solid rgb(179, 179, 179);
+			width: 100%;
+			opacity: 0;
+			background: rgb(37, 37, 37);
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			bottom: -135px;
+			margin-left: -10px;
+			text-align: center;
+			animation-name: slideDown;
+			animation-timing-function: ease-out;
+			animation-duration: 0.5s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			pointer-events: all;
+
+
+			a {
+				padding: 10px 0;
+				border-bottom: 1px solid rgb(179, 179, 179);
+			}
+
+			// right: 50%;
+			@keyframes slideDown {
+				0% {
+					transform: translateY(-20%);
+					opacity: 0;
+				}
+
+
+				100% {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+
+		}
+
+	}
 }

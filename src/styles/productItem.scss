@@ -1,36 +1,40 @@
 @import "mixins.scss";
 @import "constants.scss";
 
-.productItem{
+.productItem {
 	box-sizing: border-box;
 	display: inline-block;
 	width: 300px;
 	height: 425px;
 	background: $main-color;
 	padding: 30px 44px;
-	margin: 10px ;
+	margin: 10px;
 
-	.productColumn{
-		@include column(365px,space-between, center);
+	.productColumn {
+		@include column(365px, space-between, center);
 		text-align: center;
-		.productPhoto{
-			img{
+
+		.productPhoto {
+			img {
 				width: 177px;
 				height: 233px;
 			}
 		}
-		.productName{
+
+		.productName {
 			font-size: 18px;
 		}
-		.productPrice{
+
+		.productPrice {
 			font-size: 24px;
 		}
 	}
+
 	transition: 1s;
 
-	border: 1px solid  $main-color;
+	border: 1px solid $main-color;
 
-	&:hover{
+	&:hover {
 		// width: 299px;
 		// height: 420px;
 		transition: 1s;
@@ -38,7 +42,14 @@
 	}
 }
 
-.hideElem{
+.hideElem {
 	display: none;
 }
 
+@media only screen and (max-width : 500px) {
+	.productItem {
+		width: 100%;
+		margin: 10px 15px;
+
+	}
+}

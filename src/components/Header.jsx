@@ -2,13 +2,10 @@ import React from 'react'
 import { NavLink, Route } from 'react-router-dom'
 import appleLogo from "../imgs/appleLogo.png"
 import bag from "../imgs/bag.png"
-
-
 import "../styles/header.scss"
-import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Header = React.memo((props) => {
-
+	const [isCategoriesClicked, setIsCategoriesClicked] = React.useState(false)
 	return (
 
 		<div className="header">
@@ -17,12 +14,17 @@ const Header = React.memo((props) => {
 					<div className="appleLogo"><img src={appleLogo} alt="" /></div>
 				</Route>
 
-				<div className="smallRowHeader">
+				<div onClick={() => setIsCategoriesClicked(false)}
+					className={isCategoriesClicked ? 'smallScreenCategories' : 'smallRowHeader'}>
 					<NavLink to="/iphones" className={isActive => isActive ? 'activePage' : ''} >iPhone</NavLink>
 					<NavLink to="/ipads" className={isActive => isActive ? 'activePage' : ''}>iPad</NavLink>
 					<NavLink to="/macbooks" className={isActive => isActive ? 'activePage' : ''}>Mac</NavLink>
 				</div>
-				<NavLink to="/bag" className={isActive => isActive ? 'activeBag' : ''}>
+				<div onClick={() => setIsCategoriesClicked(!isCategoriesClicked)} className="mobileScreen">
+					Categories
+				</div>
+				<NavLink onClick={() => setIsCategoriesClicked(false)}
+					to="/bag" className={isActive => isActive ? 'activeBag' : ''}>
 					<div className="bagHeader">
 						<img src={bag} alt="" />
 						{/* 

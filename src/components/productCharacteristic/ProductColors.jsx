@@ -10,7 +10,7 @@ const ProductColors = React.memo((props) => {
 			</div>
 			<div className="colors">
 
-				{props.colors.length != 0 ? props.colors.map((item, index) => {
+				{props.colors.length !== 0 ? props.colors.map((item, index) => {
 					return <ProductSelectColor changeUrl={props.changeUrl} name={item} key={index} activeColor={props.activeColor} />
 
 				}) : ''}

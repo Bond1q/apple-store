@@ -3,8 +3,8 @@ import { getItemsFromDB } from "../../api/api"
 import { filterItems, toggleFilter } from "../filters/filter"
 
 const SET_IPADS = "SET_IPADS"
-const TOGGLE_FILTER = "TOGGLE_FILTER"
-const CHANGE_PRICE = "CHANGE_PRICE"
+const TOGGLE_IPADS_FILTER = "TOGGLE_IPADS_FILTER"
+const CHANGE_PRICE_IPAD = "CHANGE_PRICE_IPAD"
 
 const initialState = {
 	ipads: [],
@@ -51,7 +51,7 @@ const ipadsReducer = (state = initialState, action) => {
 				...state, ipads: action.ipads, maxPrice: maxElem, minPrice: minElem,
 				models: modelsList, sizes: sizesList, colors: colorsList
 			}
-		case TOGGLE_FILTER:
+		case TOGGLE_IPADS_FILTER:
 			let type, newFilter;
 			switch (action.filterType) {
 				case "Model":
@@ -66,11 +66,12 @@ const ipadsReducer = (state = initialState, action) => {
 				default:
 					break;
 			}
+			console.log('IPADS REDUCE');
 			newFilter = toggleFilter(state.activeFilters[type], action.filterItem)
 			filteredIpads = filterItems(state.ipads, state.activeFilters)
 			// console.log(filteredIpads);
 			return { ...state, ipads: filteredIpads, activeFilters: { ...state.activeFilters, type: newFilter } }
-		case CHANGE_PRICE:
+		case CHANGE_PRICE_IPAD:
 			filteredIpads = filterItems(state.ipads, state.activeFilters, action.minPrice, action.maxPrice)
 			return { ...state, ipads: filteredIpads, minPrice: action.minPrice, maxPrice: action.maxPrice }
 		default:
@@ -79,8 +80,8 @@ const ipadsReducer = (state = initialState, action) => {
 }
 
 export const setIpads = (ipads) => ({ type: SET_IPADS, ipads })
-export const toggleIpadFilter = (filterType, filterItem) => ({ type: TOGGLE_FILTER, filterType, filterItem })
-export const changePrice = (minPrice, maxPrice) => ({ type: CHANGE_PRICE, minPrice, maxPrice })
+export const toggleIpadFilter = (filterType, filterItem) => ({ type: TOGGLE_IPADS_FILTER, filterType, filterItem })
+export const changePrice = (minPrice, maxPrice) => ({ type: CHANGE_PRICE_IPAD, minPrice, maxPrice })
 
 export const getIpads = () => {
 	return async (dispatch) => {

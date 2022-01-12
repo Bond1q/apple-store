@@ -6,7 +6,6 @@ import Bag from "./pages/Bag";
 import IpadsPage from "./pages/IpadsPage";
 import IpadProductPage from "./pages/IpadProductPage";
 import MacsPage from "./pages/MacsPage";
-
 function App() {
 
 	return (

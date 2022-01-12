@@ -59,7 +59,7 @@ const bagReducer = (state = initialState, action) => {
 			for (let item of state.items) {
 				if (item.name === action.name) {
 					item.count -= 1;
-					if (item.count == 0) {
+					if (item.count === 0) {
 						let index = state.items.indexOf(item)
 						state.items.splice(index, 1)
 					} else {

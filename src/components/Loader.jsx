@@ -1,5 +1,4 @@
 import React from 'react'
-import loader from '../imgs/loader.gif'
 
 function Loader() {
 	return (

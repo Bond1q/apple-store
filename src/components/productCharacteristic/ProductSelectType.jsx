@@ -9,7 +9,7 @@ const ProductSelectType = React.memo((props) => {
 				{props.categoryName}
 			</div>
 			<div className="types">
-				{props.categories.length != 0 ? props.categories.map((item, index) => {
+				{props.categories.length !== 0 ? props.categories.map((item, index) => {
 					return <ProductSelectTypeItem changeUrl={props.changeUrl} name={item} key={index} activeCategory={props.activeCategory} />
 				}) : ''}
 			</div>

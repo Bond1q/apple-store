@@ -23,14 +23,14 @@ const ipadItemReducer = (state = initialState, action) => {
 			const size = curIphoneInfo[1].replace('-', ' ')
 			const color = curIphoneInfo[2]
 			action.ipads.forEach(ipad => {
-				if (ipad.name == model) {
+				if (ipad.name === model) {
 					if (!sizesList.includes(ipad.size)) {
 						sizesList.push(ipad.size)
 					}
 					if (!colorsList.includes(ipad.color)) {
 						colorsList.push(ipad.color)
 					}
-					if (ipad.size == size && ipad.color == color) {
+					if (ipad.size === size && ipad.color === color) {
 						ipadPrice = ipad.price
 						imagesList = [ipad.imgUrl, ...ipad.moreImgs]
 

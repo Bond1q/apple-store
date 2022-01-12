@@ -101,7 +101,7 @@
 		}
 
 		.types {
-			@include row(100%, auto, center);
+			@include row(100%, flex-start, center);
 
 			.pstItem {
 				font-size: 17px;
@@ -134,7 +134,7 @@
 		}
 
 		.colors {
-			@include row(100%, auto, center);
+			@include row(100%, flex-start, center);
 
 			.productSelectColor {
 				margin-right: 18px;
@@ -210,7 +210,7 @@
 	}
 
 	.btnsBuy {
-		@include row(100%, start, center);
+		@include row(100%, flex-start, center);
 		padding-left: 15px;
 		margin-top: 60px;
 		margin-bottom: 70px;
@@ -261,6 +261,103 @@
 
 			}
 		}
+
+		@media only screen and (max-width : 425px) {
+			flex-direction: column;
+
+
+
+
+			.btnBuy {
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+		}
 	}
 
+}
+
+@media only screen and (max-width : 500px) {
+	.productPage {
+		width: 100%;
+		max-width: 100%;
+
+		.sides {
+			flex-direction: column;
+			width: 100%;
+
+			.price {
+
+
+				&::before {
+					position: absolute;
+					top: -18px;
+					left: 0;
+					content: '';
+					background-image: url("../imgs/linePoductPage.png");
+					width: calc(100% - 10px);
+					margin-left: 5px;
+					height: 1px;
+
+				}
+			}
+
+			.model {
+				margin-top: 70px;
+				// text-align: center;
+			}
+
+			.productSelectType {
+				&::before {
+					position: absolute;
+					top: -18px;
+					left: 0;
+					content: '';
+					background-image: url("../imgs/linePoductPage.png");
+					width: calc(100% - 10px);
+					margin-left: 5px;
+					height: 1px;
+
+				}
+			}
+
+			.productColors {
+				&::before {
+					position: absolute;
+					top: -18px;
+					left: 0;
+					content: '';
+					background-image: url("../imgs/linePoductPage.png");
+					width: calc(100% - 10px);
+					margin-left: 5px;
+					height: 1px;
+				}
+			}
+
+
+		}
+
+		.btnsBuy {
+			justify-content: center;
+			padding-left: 0;
+
+			&::before {
+				position: absolute;
+				top: -31px;
+				left: 0;
+				content: '';
+				background-image: url("../imgs/linePoductPage.png");
+				width: calc(100% - 10px);
+				margin-left: 5px;
+				height: 1px;
+			}
+
+			.btnBuy:last-child {
+				margin-right: 0;
+			}
+
+		}
+
+		// overflow-x: hidden;
+	}
 }

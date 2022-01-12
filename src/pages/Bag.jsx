@@ -5,7 +5,6 @@ import ProductInfo from '../components/BagComponents/ProductInfo'
 import SuccessOrder from '../components/SuccessOrder'
 import { deleteItemFromBag, decreaseItemCount, getItemsFromBag, increaseItemCount, deleteAllItemsFromBag } from '../redux/reducers/bag-reducer'
 import '../styles/bag.scss'
-// import { CSSTransition } from 'react-transition-group'
 
 
 const Bag = () => {
@@ -32,7 +31,6 @@ const Bag = () => {
 	}
 
 	const [isSuccessOrder, setIsSuccessOrder] = React.useState(false)
-	const [isCheckOut, setIsCheckOut] = React.useState(false)
 
 	return (
 		<div className='bag'>
@@ -40,7 +38,7 @@ const Bag = () => {
 			<div className="title">Shopping Bag</div>
 			{items.length === 0 ? <div className='emptyBag'>Bag is empty</div> :
 				<div>
-					{items.length != 0 ? items.map((item, index) => {
+					{items.length !== 0 ? items.map((item, index) => {
 						return <ProductInfo onIncreaseCounter={onIncreaseCounter}
 							onDecreaseCounter={onDecreaseCounter} key={index}
 							onDeleteItemFromBag={onDeleteItemFromBag}

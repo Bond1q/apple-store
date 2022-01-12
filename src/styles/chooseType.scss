@@ -119,3 +119,85 @@
 
 	}
 }
+
+.mobileScreenFilter {
+	display: none;
+}
+
+.chooseTypeVisible {
+	display: auto;
+}
+
+
+
+
+
+
+@media only screen and (max-width : 500px) {
+
+
+	.mobileScreenFilter {
+		display: block;
+		padding: 10px 0;
+		font-size: 18px;
+		text-align: center;
+		font-weight: 400;
+		width: calc(100vw - 30px);
+		margin: 10px 15px;
+		position: relative;
+
+		background: #1d1d1d;
+
+	}
+
+	.chooseTypeVisible {
+		display: none;
+	}
+
+	.chooseType {
+		position: absolute;
+		background: rgb(37, 37, 37);
+		width: calc(100vw - 30px);
+		margin: 0 15px;
+		top: 137px;
+		animation-name: slideDown;
+		animation-timing-function: ease-out;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+		pointer-events: all;
+
+		.chooseTypePriceBlock {
+			width: 100%;
+		}
+
+		.chooseTypeBlock {
+			&::before {
+				position: absolute;
+				top: -20px;
+				left: -10px;
+				background-image: url("../imgs/line.png");
+				content: '';
+				height: 1px;
+				width: calc(100% + 20px);
+			}
+		}
+
+
+
+		@keyframes slideDown {
+			0% {
+				transform: translateY(-5%);
+				opacity: 0;
+			}
+
+
+			100% {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
+
+
+}
