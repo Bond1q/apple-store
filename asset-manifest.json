@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/apple-store/static/css/main.90830d70.chunk.css",
-    "main.js": "/apple-store/static/js/main.ed1be120.chunk.js",
-    "main.js.map": "/apple-store/static/js/main.ed1be120.chunk.js.map",
+    "main.css": "/apple-store/static/css/main.1c1e93fa.chunk.css",
+    "main.js": "/apple-store/static/js/main.6296b360.chunk.js",
+    "main.js.map": "/apple-store/static/js/main.6296b360.chunk.js.map",
     "runtime-main.js": "/apple-store/static/js/runtime-main.967c6a80.js",
     "runtime-main.js.map": "/apple-store/static/js/runtime-main.967c6a80.js.map",
-    "static/js/2.003bccfe.chunk.js": "/apple-store/static/js/2.003bccfe.chunk.js",
-    "static/js/2.003bccfe.chunk.js.map": "/apple-store/static/js/2.003bccfe.chunk.js.map",
+    "static/js/2.55e8b647.chunk.js": "/apple-store/static/js/2.55e8b647.chunk.js",
+    "static/js/2.55e8b647.chunk.js.map": "/apple-store/static/js/2.55e8b647.chunk.js.map",
     "index.html": "/apple-store/index.html",
-    "static/css/main.90830d70.chunk.css.map": "/apple-store/static/css/main.90830d70.chunk.css.map",
-    "static/js/2.003bccfe.chunk.js.LICENSE.txt": "/apple-store/static/js/2.003bccfe.chunk.js.LICENSE.txt",
-    "static/media/loader.d0b6a74f.gif": "/apple-store/static/media/loader.d0b6a74f.gif"
+    "static/css/main.1c1e93fa.chunk.css.map": "/apple-store/static/css/main.1c1e93fa.chunk.css.map",
+    "static/js/2.55e8b647.chunk.js.LICENSE.txt": "/apple-store/static/js/2.55e8b647.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.967c6a80.js",
-    "static/js/2.003bccfe.chunk.js",
-    "static/css/main.90830d70.chunk.css",
-    "static/js/main.ed1be120.chunk.js"
+    "static/js/2.55e8b647.chunk.js",
+    "static/css/main.1c1e93fa.chunk.css",
+    "static/js/main.6296b360.chunk.js"
   ]
 }
