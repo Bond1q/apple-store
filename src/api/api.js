@@ -7,3 +7,18 @@ export const getItemsFromDB = async () => {
 	return items
 }
 
+export const isRealCityCountry = async (country, city) => {
+	let data
+	if (country == '') {
+		data = await axios.get(`https://nominatim.openstreetmap.org/search?city=${city}&format=json`)
+	} else if (city == '') {
+		data = await axios.get(`https://nominatim.openstreetmap.org/search?country=${country}&format=json`)
+	} else {
+		data = await axios.get(`https://nominatim.openstreetmap.org/search?city=${city}&country=${country}&format=json`)
+
+	}
+	if (data.data.length === 0) {
+		return false
+	}
+	return true
+}
