@@ -64,15 +64,13 @@ const iphonesReducer = (state = initialState, action) => {
 				default:
 					break;
 			}
-			console.log('IPHONE REDUCER');
 
 			newFilter = toggleFilter(state.activeFilters[type], action.filterItem)
 			filteredIphones = filterItems(state.iphones, state.activeFilters)
 			return { ...state, iphones: filteredIphones, activeFilters: { ...state.activeFilters, type: newFilter } }
 
 		case CHANGE_PRICE:
-			console.log('PRICE');
-			console.log(state.iphones);
+
 			filteredIphones = filterItems(state.iphones, state.activeFilters, action.minPrice, action.maxPrice)
 			return { ...state, iphones: filteredIphones, minPrice: action.minPrice, maxPrice: action.maxPrice }
 		default:

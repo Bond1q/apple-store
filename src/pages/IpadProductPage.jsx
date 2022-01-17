@@ -1,36 +1,24 @@
 import React from 'react'
 import '../styles/productPage.scss'
-import ProductSelectType from '../components/productCharacteristic/ProductSelectType';
-import PhotosCarousel from '../components/productCharacteristic/PhotosCarousel';
-import ProductColors from '../components/productCharacteristic/ProductColors';
-import BtnsBuy from '../components/productCharacteristic/BtnsBuy';
 import { useDispatch, useSelector } from 'react-redux';
 import { getIpadInfo } from '../redux/reducers/ipadItem-reducer';
 import { useLocation, useHistory } from 'react-router-dom';
-import { addItemToBag } from '../redux/reducers/bag-reducer';
-import { numberWithSpaces } from '../assets/numberWuthSpace';
-import Loader from '../components/Loader';
+import DevicePage from './DevicePage';
 
 const IpadProductPage = () => {
 	const url = useLocation().pathname
-	const urlParts = url.split('/')[3].split('_')
 	const history = useHistory()
-	const [isReady, seIsReady] = React.useState(true)
+	const urlParts = url.split('/')[3].split('_')
 	const dispatch = useDispatch()
 	const [name, sizes, colors, activeSize, activeColor, price, images] = useSelector(({ ipadItemStore }) => {
 		const i = ipadItemStore
 		return [ipadItemStore.name, i.sizes, i.colors, i.activeSize, i.activeColor, i.price, i.images]
 	})
 
-	const fullName = `${name} ${activeSize} (${activeColor})`
 
 	React.useEffect(() => {
 		dispatch(getIpadInfo(url))
 	}, [url])
-
-	React.useEffect(() => {
-		seIsReady(!isReady)
-	}, [name, sizes, colors, activeSize, activeColor, price, images, url])
 
 
 
@@ -44,34 +32,25 @@ const IpadProductPage = () => {
 		}
 	}
 
-	const addIphoneToBag = () => {
-		dispatch(addItemToBag({ name: fullName, img: images[0], url: url, price: price }))
-	}
+
 
 
 	return (
 		<div>
-			{isReady ? <div className='productPage'>
-				<div className="sides">
-					<div className="side">
-						<PhotosCarousel images={images} />
-
-					</div>
-					<div className="side">
-						<div className='model'>{name} ({activeColor})</div>
-						<div className="price">${numberWithSpaces(price)}</div>
-						<ProductSelectType changeUrl={changeUrl} categoryName={"Sizes"} categories={sizes} activeCategory={activeSize} />
-						<ProductColors changeUrl={changeUrl} colors={colors} activeColor={activeColor} />
-						<BtnsBuy addToBag={addIphoneToBag} />
-					</div>
-				</div>
-			</div> :
-				<Loader />}
+			<DevicePage
+				changeUrl={changeUrl}
+				name={name}
+				sizes={sizes}
+				colors={colors}
+				activeSize={activeSize}
+				activeColor={activeColor}
+				price={price}
+				images={images}
+				url={url}
+				dispatch={dispatch}
+			/>
 
 		</div>
-
-
-
 	)
 }
 

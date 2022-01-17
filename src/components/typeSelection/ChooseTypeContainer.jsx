@@ -3,8 +3,12 @@ import ChooseTypeBlock from './ChooseTypeBlock';
 import "../../styles/chooseType.scss"
 import { useDispatch } from 'react-redux';
 import { changePrice } from '../../redux/reducers/iphones-reducer';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
+import { changeIpadsPrice } from '../../redux/reducers/ipads-reducer';
+import { numberWithSpaces } from '../../assets/numberWuthSpace';
 
 const ChooseTypeContainer = (props) => {
+	const url = useLocation().pathname
 	const dispatch = useDispatch()
 	const [minPrice, setMinPrice] = React.useState(props.minPrice);
 	const [maxPrice, setMaxPrice] = React.useState(props.maxPrice);
@@ -20,9 +24,7 @@ const ChooseTypeContainer = (props) => {
 			setMaxPrice(e.target.value.replace(/ /g, ''))
 		}
 	}
-	function numberWithSpaces(x) {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-	}
+
 
 	React.useEffect(() => {
 		setMinPrice((props.minPrice))
@@ -32,7 +34,11 @@ const ChooseTypeContainer = (props) => {
 
 	React.useEffect(() => {
 		if (shoudFilterByPrice) {
-			dispatch(changePrice(minPrice, maxPrice))
+			if (url === "/iphones") {
+				dispatch(changePrice(minPrice, maxPrice))
+			} else if (url === "/ipads") {
+				dispatch(changeIpadsPrice(minPrice, maxPrice))
+			}
 
 		}
 	}, [shoudFilterByPrice])

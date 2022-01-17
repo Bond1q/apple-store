@@ -66,7 +66,6 @@ const ipadsReducer = (state = initialState, action) => {
 				default:
 					break;
 			}
-			console.log('IPADS REDUCE');
 			newFilter = toggleFilter(state.activeFilters[type], action.filterItem)
 			filteredIpads = filterItems(state.ipads, state.activeFilters)
 			// console.log(filteredIpads);
@@ -81,7 +80,7 @@ const ipadsReducer = (state = initialState, action) => {
 
 export const setIpads = (ipads) => ({ type: SET_IPADS, ipads })
 export const toggleIpadFilter = (filterType, filterItem) => ({ type: TOGGLE_IPADS_FILTER, filterType, filterItem })
-export const changePrice = (minPrice, maxPrice) => ({ type: CHANGE_PRICE_IPAD, minPrice, maxPrice })
+export const changeIpadsPrice = (minPrice, maxPrice) => ({ type: CHANGE_PRICE_IPAD, minPrice, maxPrice })
 
 export const getIpads = () => {
 	return async (dispatch) => {

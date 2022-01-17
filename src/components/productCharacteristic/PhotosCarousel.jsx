@@ -6,6 +6,7 @@ const PhotosCarousel = React.memo((props) => {
 	const [activeSlideIndex, setActiveSlideIndex] = React.useState(0)
 	const pixels = window.innerWidth;
 	const width = pixels > 500 ? '450px' : '200px'
+	const marginLeft = pixels > 500 ? '30px' : '0px'
 	return (
 		<div className='carousel'>
 			{props.images.length !== 0 ?
@@ -17,7 +18,7 @@ const PhotosCarousel = React.memo((props) => {
 							background: "#1d1d1d",
 							width: { width },
 							justifyContent: 'left',
-							marginLeft: '30px',
+							marginLeft: marginLeft,
 							marginTop: '0px'
 
 						}
@@ -76,7 +77,7 @@ const PhotosCarousel = React.memo((props) => {
 				</Carousel> : ''
 			}
 
-			<div className="smallPhotos">
+			<div className={props.images.length === 2 ? "smallPhotos twoPhotos" : "smallPhotos"}>
 
 				{props.images.length !== 0 ? props.images.map((img, index) => {
 					return <SmallCarouselPhotos index={index} key={index} setActiveSlideIndex={setActiveSlideIndex} img={img} />

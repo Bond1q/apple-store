@@ -290,6 +290,16 @@
 		}
 
 		.productInfo {
+
+			.bagRow {
+				min-height: 150px;
+
+				.productPhoto {
+					display: flex;
+					align-items: center;
+				}
+			}
+
 			&::after {
 				position: absolute;
 				bottom: -30px;
@@ -308,6 +318,7 @@
 
 				.productName {
 					flex-basis: 0;
+
 				}
 
 				.counter {
@@ -319,7 +330,7 @@
 					flex-basis: 0;
 
 					.price {
-						margin-right: 20%;
+						margin-right: 25%;
 					}
 				}
 			}

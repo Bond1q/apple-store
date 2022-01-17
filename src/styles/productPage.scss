@@ -62,10 +62,30 @@
 
 		}
 
+		.twoPhotos {
+			max-width: 170px;
+			margin-left: 160px !important;
+
+			@media screen and (max-width:500px) {
+				margin-left: auto !important;
+				margin-top: 0px !important;
+
+			}
+
+		}
+
 		.smallPhotos {
-			@include row(200px, space-between, center);
+			@media screen and (max-width:500px) {
+				margin-left: auto;
+				@include row(200px, space-between, center);
+				margin-top: 25px;
+
+
+			}
+
+			@include row(220px, space-between, center);
 			margin-top: 15px;
-			margin-left: 150px;
+			margin-left: 135px;
 
 			.smallPhoto {
 				img {
@@ -75,6 +95,7 @@
 				}
 
 			}
+
 
 		}
 	}
