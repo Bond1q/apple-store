@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/apple-store/static/css/main.1c1e93fa.chunk.css",
-    "main.js": "/apple-store/static/js/main.6296b360.chunk.js",
-    "main.js.map": "/apple-store/static/js/main.6296b360.chunk.js.map",
+    "main.css": "/apple-store/static/css/main.d95ba11f.chunk.css",
+    "main.js": "/apple-store/static/js/main.d847c1fb.chunk.js",
+    "main.js.map": "/apple-store/static/js/main.d847c1fb.chunk.js.map",
     "runtime-main.js": "/apple-store/static/js/runtime-main.967c6a80.js",
     "runtime-main.js.map": "/apple-store/static/js/runtime-main.967c6a80.js.map",
-    "static/js/2.55e8b647.chunk.js": "/apple-store/static/js/2.55e8b647.chunk.js",
-    "static/js/2.55e8b647.chunk.js.map": "/apple-store/static/js/2.55e8b647.chunk.js.map",
+    "static/js/2.e4295d60.chunk.js": "/apple-store/static/js/2.e4295d60.chunk.js",
+    "static/js/2.e4295d60.chunk.js.map": "/apple-store/static/js/2.e4295d60.chunk.js.map",
     "index.html": "/apple-store/index.html",
-    "static/css/main.1c1e93fa.chunk.css.map": "/apple-store/static/css/main.1c1e93fa.chunk.css.map",
-    "static/js/2.55e8b647.chunk.js.LICENSE.txt": "/apple-store/static/js/2.55e8b647.chunk.js.LICENSE.txt"
+    "static/css/main.d95ba11f.chunk.css.map": "/apple-store/static/css/main.d95ba11f.chunk.css.map",
+    "static/js/2.e4295d60.chunk.js.LICENSE.txt": "/apple-store/static/js/2.e4295d60.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.967c6a80.js",
-    "static/js/2.55e8b647.chunk.js",
-    "static/css/main.1c1e93fa.chunk.css",
-    "static/js/main.6296b360.chunk.js"
+    "static/js/2.e4295d60.chunk.js",
+    "static/css/main.d95ba11f.chunk.css",
+    "static/js/main.d847c1fb.chunk.js"
   ]
 }
