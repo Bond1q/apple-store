@@ -11,8 +11,6 @@ const CTBlockItem = React.memo((props) => {
 	const dispatch = useDispatch();
 	const [isClicked, setIsClicked] = React.useState(false)
 	const url = useLocation().pathname
-	// console.log(url);
-	// if (url === "/iphones") {
 	onClickHandler = () => {
 		if (isClicked) {
 			setIsClicked(false)
@@ -20,7 +18,6 @@ const CTBlockItem = React.memo((props) => {
 			setIsClicked(true)
 		}
 	}
-	// }
 
 	React.useEffect(() => {
 		if (isClicked) {

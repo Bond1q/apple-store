@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import React from 'react';
 import { useState } from 'react';
 
-const InputInfo = ({ inputType, validation, isError }) => {
-	const [inputValue, setInputValue] = useState('')
+const InputInfo = ({ inputType, validation, isError, inputValue, id }) => {
+	const [inputActiceValue, setInputValue] = useState(inputValue)
 	const onInputChange = (e) => {
 		setInputValue(e.target.value)
 	}
@@ -11,8 +11,8 @@ const InputInfo = ({ inputType, validation, isError }) => {
 
 
 	return (
-		<div onBlur={() => validation(inputValue)} className={classNames('inputInfo', { 'error': isError })}>
-			<input placeholder={inputType} onChange={(e) => onInputChange(e)} value={inputValue} type="text" />
+		<div onBlur={() => validation(inputActiceValue, id)} className={classNames('inputInfo', { 'error': isError })}>
+			<input placeholder={inputType} onChange={(e) => onInputChange(e)} value={inputActiceValue} type="text" />
 		</div>
 	);
 };

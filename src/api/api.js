@@ -9,14 +9,12 @@ export const getItemsFromDB = async () => {
 
 export const isRealCityCountry = async (country, city) => {
 	let data
-	if (country == '') {
-		data = await axios.get(`https://nominatim.openstreetmap.org/search?city=${city}&format=json`)
-	} else if (city == '') {
-		data = await axios.get(`https://nominatim.openstreetmap.org/search?country=${country}&format=json`)
-	} else {
+	try {
 		data = await axios.get(`https://nominatim.openstreetmap.org/search?city=${city}&country=${country}&format=json`)
-
+	} catch (error) {
+		throw (error)
 	}
+
 	if (data.data.length === 0) {
 		return false
 	}

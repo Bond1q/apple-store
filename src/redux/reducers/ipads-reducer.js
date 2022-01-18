@@ -68,7 +68,6 @@ const ipadsReducer = (state = initialState, action) => {
 			}
 			newFilter = toggleFilter(state.activeFilters[type], action.filterItem)
 			filteredIpads = filterItems(state.ipads, state.activeFilters)
-			// console.log(filteredIpads);
 			return { ...state, ipads: filteredIpads, activeFilters: { ...state.activeFilters, type: newFilter } }
 		case CHANGE_PRICE_IPAD:
 			filteredIpads = filterItems(state.ipads, state.activeFilters, action.minPrice, action.maxPrice)
