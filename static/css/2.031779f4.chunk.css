@@ -1,0 +1,2 @@
+.lazy-load-image-background.black-and-white{-webkit-filter:grayscale(1);filter:grayscale(1)}.lazy-load-image-background.black-and-white.lazy-load-image-loaded{-webkit-filter:grayscale(0);filter:grayscale(0);transition:-webkit-filter .3s;transition:filter .3s;transition:filter .3s,-webkit-filter .3s}.lazy-load-image-background.black-and-white>img{opacity:0}.lazy-load-image-background.black-and-white.lazy-load-image-loaded>img{opacity:1;transition:opacity .3s}
+/*# sourceMappingURL=2.031779f4.chunk.css.map */
